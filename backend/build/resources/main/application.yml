@@ -1,0 +1,17 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/example
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: c7d6a497a031cb6fe753
+            clientSecret: 9ef701a40c5d080bd8d45176960e8fcce7de3a48
+            redirectUriTemplate: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - user:email
+              - read:user
+server:
+  port: 3000
